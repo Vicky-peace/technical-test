@@ -8,27 +8,38 @@
 
 /* Points*/
 
-// If a number is divisible by 3 instead of saying the number, we'll say "Fizz.
+// If a number is divisible by 3 , we'll say "Fizz.
 
-// If a number is divisible by 5  instead of saying the number, we'll say "Buzz.
+// If a number is divisible by 5 , we'll say "Buzz.
 
 //If a number is divisible by both 3 and 5, we'll say "FizzBuzz.
 
-
-for (let i = 1; i <= 100; i++){
-    if(i % 3 === 0  && i % 5 === 0){
-        console.log("FizzBuzz");
-    } else if (i % 3 === 0){
-        console.log("Fizz");
-    }else if (i % 5 === 0){
-        console.log("Buzz");
-    } else {
-        console.log(i);
+function fizzBuzz(num){
+    for(let i = 1 ; i <= num ; i++){
+        if(i % 3 === 0 && i % 5 === 0){
+            console.log("FizzBuzz")
+        }else if(i % 3 === 0){
+            console.log("Fizz")
+        }else if(i % 5 === 0){
+            console.log("Buzz")
+        }else{
+            console.log(i)
+        }
     }
 }
+fizzBuzz(100);
+
 
 
 /**Question 2: Fibonacci Sequence**/
 
 //Write a program to generate the Fibonacci sequence up to 100.
 
+function fibonnaci(n){
+    const fib = [0,1]  //initialize a variable fib with 2 numbers in an array
+    for(let i = 2; i<n; i++){
+        fib[i] = fib[i-1] + fib[i-2]  //i is the sum of two preceeding numbers
+    }
+    return fib;
+}
+console.log(fibonnaci(100));
