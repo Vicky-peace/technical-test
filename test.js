@@ -99,3 +99,20 @@ const capitalizedString = capitalizeWords(inputString);
 
 
 console.log(capitalizedString); 
+
+
+/*Question 5: Reverse Integer
+Write a program that takes an integer as input and returns an integer with reversed digit 
+ordering.
+Examples */
+
+//use toString to convert it to a new string
+//Use the split() method to return a new array
+// Use the reverse() method to reverse the new created array
+//Use the Join() method to join all the elements of the array into a string
+
+const revInt = (num) =>{
+    let myRevNum = num.toString().split("").reverse()
+    console.log(myRevNum)
+}
+revInt(123);
