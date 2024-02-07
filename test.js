@@ -43,3 +43,30 @@ function fibonnaci(n){
     return fib;
 }
 console.log(fibonnaci(100));
+
+
+
+/*
+Question 3: Power of Two
+Write a program that takes an integer as input and returns true if the input is a power of two.
+Examples: 
+8=> returns true
+6=> returns false */
+
+
+function isPowerTwo(n){
+    if(n<1){
+        return false;
+    }
+    while(n>1){
+        if(n % 2 !== 0){
+            return false;
+        }
+        n=n/2;
+    }
+    return true;
+}
+console.log(isPowerTwo(2)) //true
+console.log(isPowerTwo(8)) //true
+console.log(isPowerTwo(9)) //false
+console.log(isPowerTwo(16)) //true
