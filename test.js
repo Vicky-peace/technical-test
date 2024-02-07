@@ -115,4 +115,21 @@ const revInt = (num) =>{
     let myRevNum = num.toString().split("").reverse()
     console.log(myRevNum)
 }
-revInt(123);
+revInt(500);
+
+
+/*Question 6: Count Vowels
+ Write a program that counts the number of vowels in a sentence.
+ eg " Hello World " => returns 2 */
+
+ function vowelCount(str){
+    let count = 0;
+    let vowels = "aeiou";
+    for (let i= 0; i < str.length; i++){
+        if(vowels.indexOf(str[i].toLowerCase()) > -1){
+            count ++;
+        }
+    }
+    return count;
+ }
+vowelCount("This is Kenya");
