@@ -70,3 +70,32 @@ console.log(isPowerTwo(2)) //true
 console.log(isPowerTwo(8)) //true
 console.log(isPowerTwo(9)) //false
 console.log(isPowerTwo(16)) //true
+
+
+/*Question 4: Capitalize Words
+Write a program that accepts a string as input, capitalizes the first letter of each word in the 
+string, and then returns the result string.
+Examples: 
+"hi"=> returns "Hi"
+"i love programming"=> returns "I Love Programming"*/
+
+function capitalizeWords(str) {
+ 
+  const words = str.split(" "); // Split the string into an array of words
+
+  // Loop through each word
+  for (let i = 0; i < words.length; i++) {
+  
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);  // Capitalize the first letter
+  }
+
+  
+  return words.join(" "); // Join the capitalized words back into a string
+}
+
+// Example usage
+const inputString = "hi there, i love programming";
+const capitalizedString = capitalizeWords(inputString);
+
+
+console.log(capitalizedString); 
